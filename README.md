@@ -1,6 +1,7 @@
 # BANKING: DIRECT MARKETING CASE STUDY (CAMPAIGN RESPONSE MODEL) - CLASSIFICATION MODEL
 
 **OBJECTIVE:** This example uses data related with direct marketing campaigns of a Portuguese banking institution. The marketing campaigns were based on phone calls. Often, more than one contact to the same client was required, in order to assess if the product (bank term deposit) would be subscribed ('yes') or not ('no').
+
  **Bank client data:**
 * age (numeric)
 
@@ -12,31 +13,36 @@
 * default: has credit in default? (categorical: 'no', 'yes', 'unknown')
 * housing: has housing loan? (categorical: 'no', 'yes', 'unknown')
 * loan: has personal loan? (categorical: 'no', 'yes', 'unknown')
+
 **Related with the last contact of the current campaign:**
 * contact: contact communication type (categorical: 'cellular', 'telephone')
 * month: last contact month of year (categorical: 'jan', 'feb', 'mar', ., 'nov', 'dec')
 * day_of_week: last contact day of the week (categorical: 'mon', 'tue', 'wed', 'thu', 'fri')
 * duration: last contact duration, in seconds (numeric). Important note: this attribute highly affects the output target (e.g., if duration=0 then y='no'). Yet, the duration is not known before a call is performed. Also, after the end of the call y is obviously known. Thus, this input should only be included for benchmark purposes and should be discarded if the intention is to have a realistic predictive model.
+
 **Other attributes:**
 * campaign: number of contacts performed during this campaign and for this client (numeric, includes last contact)
 * pdays: number of days that passed by after the client was last contacted from a previous campaign (numeric; 999 means client was not previously contacted)
 * previous: number of contacts performed before this campaign and for this client (numeric)
 * poutcome: outcome of the previous marketing campaign (categorical: 'failure','nonexistent','success')
+
 **social and economic context attributes**
 * emp.var.rate: employment variation rate - quarterly indicator (numeric)
 * cons.price.idx: consumer price index - monthly indicator (numeric)
 * cons.conf.idx: consumer confidence index - monthly indicator (numeric)
 * euribor3m: euribor 3 month rate - daily indicator (numeric)
 * nr.employed: number of employees - quarterly indicator (numeric)
+
 **Output variable (desired target):**
 * y - has the client subscribed a term deposit? (binary: "yes","no")
+
 **Missing Attribute Values:** There are several missing values in some categorical attributes, all coded with the "unknown" label. These missing values can be treated as a possible class label or using deletion or imputation techniques.
 
 ## Targeting the Right Prospects: What are Response Models?
 
 Response models use data mining to find similarities between responders from previous marketing campaigns to predict who is likely or not likely to respond to a future campaign. The model is then scored against the prospects of the new campaign and a marketer can choose to mail only those people that are most likely to purchase. This increases conversions and decreases costs by only mailing to those most likely to respond.
 
- Direct Marketing Models: Good, Better, Best
+Direct Marketing Models: Good, Better, Best
 
 Not all models are created equal. Here’s a quick summary of different types of direct marketing models:
 
@@ -50,7 +56,7 @@ RFM can identify good customers and provide a lift in response rates versus not 
 
 Unfortunately, RFM doesn’t take into account life stage and assumes that customers are likely to continue to respond the same way. If RFM is the only targeting method, the most attractive segments are likely to be over-marketed to at the expense of other segments that could be invested in.
 
-**BETTER. Traditional Response or Regression Models:**
+**Traditional Response or Regression Models:**
 more sophisticated and predictive than RFM
 
 Regression models determine the correlation between variables. Unlike RFM models, regression takes into account that scores can quickly change when combined with other variables.
@@ -59,6 +65,7 @@ The model is developed specifically to predict a desired behavior, such as respo
 
 This is by far the most widely used approach for marketers and has been a mainstay of predictive analytics for decades.
 BEST.
+
 **Multi-Channel Customer Level Response Models:
 
 A New Approach that Outperforms Traditional
