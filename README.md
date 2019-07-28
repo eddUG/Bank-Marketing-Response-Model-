@@ -66,7 +66,7 @@ The model is developed specifically to predict a desired behavior, such as respo
 This is by far the most widely used approach for marketers and has been a mainstay of predictive analytics for decades.
 BEST.
 
-**Multi-Channel Customer Level Response Models:
+**Multi-Channel Customer Level Response Models:**
 
 A New Approach that Outperforms Traditional
 
